@@ -1,51 +1,78 @@
 header {
-    background: url(images/central_park.jpg) 0 -200px no-repeat;  /* place image as background */
-    background-size: 1500px;
-    /*background-position: 0 -200px;*/
-    /*background-repeat: no-repeat;*/
-    height: 400px; /* give header some height to display the background image */
-    padding-top: 100px;
-    padding-left: 100px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
+  background: url(images/central_park.jpg) no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  padding-top: 100px;
+  padding-left: 100px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 20px;
+}
+li a {
+  text-decoration: none;
+}
+li a:link {
+  color: #000; /* Before Click */
+}
+li a:visited {
+  color: #818db3; /* After Click */
+}
+li a:hover {
+  color: #333; /* Mouse Over */
+}
+li a:active {
+  color: #753a30; /* Mouse Down */
+}
+nav {
+  background-color: rgb(255, 245, 238);
+  height: 50px;
+  text-align: center;
+  padding-top: 2px;
+}
+main {
+  margin: 50px;
+}
+main h1 {
+  color: rgb(129, 141, 179);
+  font-family: arial;
+}
+footer {
+  height: 40px;
+  background-color: rgb(129, 141, 179);
+  text-align: center;
+  padding-top: 20px;
+  color: rgb(211, 218, 240);
+}
+@media (max-width: 600px) {
+  .cards {
+    display: block;
+    width: 100%;
   }
-  li {
-    list-style-type: none;
-    display: inline;
-    padding: 0 20px;
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
   }
-  li a {
-    text-decoration: none; /* Remove Underline */
+  img {
+    width: 100%;
+    height: auto;
   }
-  li a:link {
-    color: #000; /* Before Click */
+}
+
+@media (min-width: 600px) {
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
-  li a:visited {
-    color:#818db3; /* After Click */
+  .card {
+    width: 48%;
   }
-  li a:hover {
-    color:#333; /* Mouse Over */
+  img {
+    width: 100%;
+    height: auto;
   }
-  li a:active {
-    color:#753a30; /* Mouse Down */
-  }
-  nav {
-    background-color:rgb(255, 245, 238);
-    height: 50px;
-    text-align: center;
-    padding-top: 2px;
-  }
-  main {
-    margin: 50px;
-  }
-  main h1 {
-    color:rgb(129, 141, 179);
-    font-family: arial;
-  }
-  footer {
-    height: 40px;
-    background-color:rgb(129, 141, 179);
-    text-align: center;
-    padding-top: 20px;
-    color:rgb(211, 218, 240);
-  }
+}

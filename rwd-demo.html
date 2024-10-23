@@ -1,81 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>  
-<title>My First Web Page</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My First Web Page</title>
+    <link rel="stylesheet" href="demo.css" />
+  </head>
 
-<link rel="stylesheet" href="demo.css">
+  <body>
+    <div id="container">
+      <header style="font-size: 60px; color: #fff">My Web Site Brand</header>
+      <nav>
+        <ul>
+          <li><a href="js-demo2.html">Home</a></li>
+          <li><a href="js-demo2b.html">About</a></li>
+          <li><a href="js-demo2d.html">Gallery</a></li>
+          <li><a href="js-demo2c.html">Contact</a></li>
+        </ul>
+      </nav>
 
-</head> 	
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$(document).ready(function() {
-    function adjustLayout() {
-        var windowWidth = $(window).width();
+      <main>
+        <div class="cards">
+          <div class="card">
+            <h1>My First Heading</h1>
+            <p>My first paragraph.</p>
+          </div>
+          <div class="card">
+            <img src="images/east-village.jpg" alt="East Village" width="400" />
+          </div>
+        </div>
+      </main>
 
-        if (windowWidth < 600) {
-            $('.cards').css({
-                'display': 'block',
-                'width': '100%'
-            });
-            $('.card').css({
-                'width': '100%',
-                'margin-bottom': '20px'
-            });
-            $('img').css({
-                'width': '100%', 
-                'height': 'auto'
-            });
-        } else {
-            $('.cards').css({
-                'display': 'flex',
-                'justify-content': 'space-between',
-                'width': '100%'
-            });
-            $('.card').css({
-                'width': '48%'  
-            });
-            $('img').css({
-                'width': '100%',  
-                'height': 'auto'
-            });
-        }
-    }
-    adjustLayout();
-
-    $(window).resize(function() {
-        adjustLayout();
-    });
-});
-</script>
-<body>
-
-<div id="container">
-
-<header style="font-size: 60px; color: #fff;">My Web Site Brand</header>
-<nav>
-	<ul>
-    <li><a href="js-demo2.html">Home</a></li>
-    <li><a href="js-demo2b.html">About</a></li>
-    <li><a href="js-demo2d.html">Gallery</a></li>
-    <li><a href="js-demo2c.html">Contact</a></li>
-	</ul>
-</nav>
-
-<main>
-  <div class="cards">
-    <div class="card">
-      <h1>My First Heading</h1>
-      <p>My first paragraph.</p>
+      <footer>&copy; Copyright 2024</footer>
     </div>
-      <div class="card"> 
-        <img src="images/east-village.jpg" alt="East Village" width="400">
-      </div>
-  </div>
-</main>
-
-<footer>&copy; Copyright 2024</footer>
-
-</div>
-
-</body>
+  </body>
 </html>
